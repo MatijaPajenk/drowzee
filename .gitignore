@@ -1,3 +1,7 @@
 splitted_data/
 .venv/
 my_data/
+*.dat
+*.avi
+*.jpg
+__pycache__/
