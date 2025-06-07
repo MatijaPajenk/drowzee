@@ -18,8 +18,8 @@ predictor_path = "shape_predictor_68_face_landmarks.dat"
 if not os.path.exists(predictor_path):
     raise FileNotFoundError("Dlib shape predictor file not found. Please download from http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2")
 
-detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor(predictor_path)
+detector = dlib.get_frontal_face_detector() # type: ignore
+predictor = dlib.shape_predictor(predictor_path) #type: ignore
 
 def process_frame(frame, model, device):
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -103,7 +103,7 @@ def main():
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = cap.get(cv2.CAP_PROP_FPS) or 24.0
 
-    fourcc = cv2.VideoWriter_fourcc(*"XVID")
+    fourcc = cv2.VideoWriter_fourcc(*"XVID") #type: ignore
     out = cv2.VideoWriter(args.output, fourcc, fps, (width, height))
     print(f"[INFO] Output video will be saved to {args.output}")
 

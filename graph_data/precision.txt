@@ -1,0 +1,15 @@
+--- Test Set Evaluation Metrics ---
+Accuracy:  0.7761
+Precision (for Drowsy class): 0.7828
+Recall (for Drowsy class):    0.8011
+F1-Score (for Drowsy class):  0.7918
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+ Alert (Class 1)       0.78      0.80      0.79       895
+Drowsy (Class 0)       0.77      0.75      0.76       789
+
+        accuracy                           0.78      1684
+       macro avg       0.78      0.77      0.77      1684
+    weighted avg       0.78      0.78      0.78      1684
