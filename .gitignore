@@ -3,5 +3,4 @@ splitted_data/
 my_data/
 *.dat
 *.avi
-*.jpg
 __pycache__/
